@@ -61,40 +61,7 @@ int main() {
     system("pause");
     return 1;
 }
-#pragma once
 
-template <typename T>
-
-
-class Node
-{
-private:
-    T value = 0;
-    Node* son = nullptr;
-public:
-    Node(const T& newValue) {
-        value = newValue;
-    }
-
-    void addValue(const T& newValue) {
-        if (son == nullptr) {
-            son = new Node<int>(newValue);
-        }
-        else {
-            son->addValue(newValue);
-        }
-
-    }
-
-    Node* next() {
-        return this->son;
-    }
-
-    void setValue(const T& newValue) { value = newValue; }
-    T& getValue() {
-        return value;
-    }
-};
 // Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
 // Depurar programa: F5 o menú Depurar > Iniciar depuración
 
