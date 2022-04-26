@@ -5,6 +5,8 @@
 #include <vector>
 #include "Node.h"
 
+using namespace std;
+
 /*template <typename T1>
 const T1&  getMax(const T1& param1, const T1& param2)
 {
@@ -43,7 +45,7 @@ int main() {
     while (option != 2)
     {
         std::cout << "Usted debera escoger una de las opciones" << std::endl;
-        std::cout << "1.Agregar algun elemento al nodo" << std::endl;
+        std::cout << "1.Agregar algun elemento" << std::endl;
         std::cout << "2.Salir" << std::endl;
         std::cin>>option;
 
@@ -102,7 +104,8 @@ int main() {
         dummy = dummy->next();
     }
     */
-   
+    
+
 
 
     system("pause");
