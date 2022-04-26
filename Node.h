@@ -34,7 +34,7 @@ public:
     Node(){}//Constructor
     ~Node(){}//Destructor
 
-    
+    //Se crea el nuevo nodo
     Node *createNode(int p)
     {
         Node* newNode = new Node();
@@ -43,9 +43,10 @@ public:
     }
 
 
-
+    //Se crea la funcio add para integrar el valor a la estructura de datos y despues darle un valor al nodo
     void add(Node*&source, int value)
     {
+        //Aqui se obtiene el valor de la estructura para despues realizarla
         if (source == NULL)
         {
             Node* newNode = createNode(value);
@@ -54,7 +55,9 @@ public:
         }
         else
         {
+           
             int newSource = source->note;
+            //Aqui se ve que se añade el valor por la izquierda o derecha
             if(value < newSource)
             {
                 add(source->left, value);
@@ -69,9 +72,6 @@ public:
         }
     }
     
-
-
-
 
 
     //typedef Node* ptrPila;
