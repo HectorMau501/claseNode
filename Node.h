@@ -3,6 +3,15 @@
 
 //template <typename T>
 
+/*
+-------------- Profe quise hacerlo con templates, pero no pude porque me marcaba error en algunos puntos
+lo hice de esta manera, deje una forma con comentarios como lo quise hacer con los templates
+pero como le digo me salian algunos errores-----------------------------
+
+
+   --- Lo hice de otra forma ---
+*/
+
 
 class Node
 {
@@ -17,6 +26,7 @@ private:
     Node* right = nullptr;
     Node* left = nullptr;
     
+    //typedef Node* ptrPila;
 
     /*
     
@@ -30,6 +40,30 @@ private:
     */
 
 public:
+
+
+    /*
+
+//Constructor
+template <typename T>
+Node<T>::Node()
+{
+    son = new int[MAX];
+    cont = 0;
+    tam = MAX;
+
+}
+
+//Destructor
+template <typename T>
+Node<T>::~Node()
+{
+    delete[] arreglo;
+
+}
+
+*/
+
 
     Node(){}//Constructor
     ~Node(){}//Destructor
@@ -71,10 +105,59 @@ public:
 
         }
     }
+
+    /*
     
+    template <typename T>
+    void Node<T>::InsertarFinal(const T& newValue)
+    {
+        if (cont == tam)
+        {
+            expandir();
+        }
+        son[cont] = newValue;
+        cont++;
+    }
 
 
-    //typedef Node* ptrPila;
+    template <typename T>
+    void Node<T>::InsertarInicio(const T& newValue)
+    {
+        if (cont == tam)
+        {
+            expandir();
+        }
+        for (size_t i = cont; i > 0; i--)
+        {
+            son[i] = son[i - 1];
+        }
+        son[0] = newValue;
+        cont++;
+    }
+
+    template <typename T>
+    size_t Node<T>::size()
+    {
+        if (cont == tam)
+        {
+            expandir();
+        }
+        for (size_t i = cont; i > 0; i--)
+        {
+            son[i] = son[i - 1];
+        }
+        son[0] = newValue;
+        cont++;
+    }
+
+    */
+
+
+
+
+
+
+    
 
     /*
     void InsertarFinal(const T& newValue);
@@ -162,71 +245,5 @@ public:
 };
 
 
-
-
-/*
-
-//Constructor
-template <typename T>
-Node<T>::Node() 
-{
-    son = new int[MAX];
-    cont = 0;
-    tam = MAX;
-
-}
-
-//Destructor
-template <typename T>
-Node<T>::~Node()
-{
-    delete[] arreglo;
-
-}
-
-
-template <typename T>
-void Node<T>::InsertarFinal(const T& newValue)
-{
-   if(cont == tam)
-   {
-       expandir();
-   }
-   son[cont] = newValue;
-   cont++;
-}
-
-
-template <typename T>
-void Node<T>::InsertarInicio(const T& newValue)
-{
-    if (cont == tam)
-    {
-        expandir();
-    }
-    for(size_t i = cont; i > 0 ; i--)
-    {
-        son[i] = son[i - 1];
-    }
-    son[0] = newValue;
-    cont++;
-}
-
-template <typename T>
-size_t Node<T>::size()
-{
-    if (cont == tam)
-    {
-        expandir();
-    }
-    for (size_t i = cont; i > 0; i--)
-    {
-        son[i] = son[i - 1];
-    }
-    son[0] = newValue;
-    cont++;
-}
-
-*/
 
 

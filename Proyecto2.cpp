@@ -28,6 +28,7 @@ int main() {
 
     int option = 0;
     int value = 0;
+    //punteros 
     Node* p = nullptr;
     Node* source = nullptr;
     
@@ -37,6 +38,7 @@ int main() {
     std::cout << "Este es un programa que se inserta y se elimina" << std::endl;
     std::cout << "Ingrese el valor para la estructura de datos" << std::endl;
     std::cin >> value;
+    //Creacion del nodo y uso del metodo add
     source->createNode(value);
     p->add(source,value);
 
@@ -51,7 +53,8 @@ int main() {
         {
         case 1:
             std::cout << "\t\t\nIngrese el valor del node" << std::endl;
-            std::cin >> value;
+            std::cin >> value; 
+            //Creacion del nodo y uso del metodo add
             source->createNode(value);
             p->add(source, value);
 
